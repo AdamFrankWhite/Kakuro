@@ -7,7 +7,7 @@ function Row(props) {
         let cellTypes = game[props.num]
         let cell = 
             <td className={"cell " + cellTypes[i].type }>
-                {cellTypes[i].type === "rule" ? cellTypes[i].value[0] + cellTypes[i].value[1] : ""}
+                {cellTypes[i].type === "rule" ? <span><span className="left">{cellTypes[i].value[0]}</span><span className="right">{cellTypes[i].value[1]}</span></span> : ""}
             </td>
 
         cells.push(cell)
@@ -20,3 +20,8 @@ function Row(props) {
 }
     
 export default Row
+
+
+// TODO
+
+// if you click on cell, brings up choice of numbers to click, more satisfying that typing, better UX
