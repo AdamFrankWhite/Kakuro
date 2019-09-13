@@ -9,7 +9,7 @@
 .cell {
   width: 100px;
   height: 100px;
-  border: 1px solid black
+  border: 1px solid black;
 }
 
 .board {
@@ -17,12 +17,31 @@
   border-spacing: 0;
 }
 
+.board:hover{
+  cursor: pointer;
+}
+
 .blank {
-  background-color: black;
+  background-color: rgb(11, 11, 11);
 }
 
 .rule {
-  background-color: gray;
+  background-image: url("./img/grayBack.png");
+  position: relative;
+}
+
+.rule > span > .left {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  font-size: 1.2em;
+}
+
+.rule > span > .right {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  font-size: 1.2em;
 }
 
 .input {
