@@ -1,20 +1,13 @@
 import React from 'react'
 import game from '../kakuro1'
+import Cell from './Cell'
 
 function Row(props) {
-    let cells = []
-    for (let i=0; i<9; i++) {
-        let cellTypes = game[props.num]
-        let cell = 
-            <td className={"cell " + cellTypes[i].type }>
-                {cellTypes[i].type === "rule" ? <span><span className="left">{cellTypes[i].value[0]}</span><span className="right">{cellTypes[i].value[1]}</span></span> : ""}
-            </td>
-
-        cells.push(cell)
-    }
+    let cells = [0,1,2,3,4,5,6,7,8]
+    // 
     return (
         <tr>
-            {cells}    
+            {cells.map(i => <Cell row={props.num} key={i} num={i}/>)}    
         </tr>
     )
 }

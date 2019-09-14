@@ -7,9 +7,13 @@
 }
 
 .cell {
-  width: 100px;
-  height: 100px;
+  width: 500px;
+  height: 50px;
   border: 1px solid black;
+}
+
+.game-cont {
+  margin: auto;
 }
 
 .board {
@@ -45,8 +49,46 @@
 }
 
 .input {
-  background-color: white;
+  background-color:white;
+  font-size: 2em;
+  font-weight: bold;
 }
+
+.input:hover {
+  border: 4px rgb(4, 0, 238) solid;
+}
+
+.keypad {
+  margin: auto;
+  width: 540px;
+}
+
+.keypad > span {
+  display: inline-block;
+}
+
+.select-num {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  right: 25%;
+  z-index: 1000;
+  transition: 0.5s
+}
+
+.num-btn {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border: black 2px solid;
+  border-radius: 5px;
+}
+
+.num-btn:hover {
+  transition: 0.5s;
+  background: black;
+  color: white;
+}
+
 
 .line {
   height: 50px;
@@ -56,4 +98,11 @@
   -moz-transform: skew(-45deg);
   -webkit-transform: skew(-45deg);
   transform: skew(-45deg);
+}
+
+@media (min-width: 820px) {
+  .cell {
+    width: 60px;
+    height: 60px;
+  }
 }

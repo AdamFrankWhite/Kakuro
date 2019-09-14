@@ -71,11 +71,13 @@ const game = [
         // C4
         {
             type: "input",
+            answer: 2
         },
 
         // C5
         {
-            type: "input"
+            type: "input",
+            answer: 1
         },
 
         // C6
@@ -116,17 +118,20 @@ const game = [
 
         // C3
         {
-            type: "input"
+            type: "input",
+            answer: 2
         },
 
         // C4
         {
-            type: "input"
+            type: "input",
+            answer: 1
         },
 
         // C5
         {
-            type: "input"
+            type: "input",
+            answer: 3
         },
 
         // C6
@@ -137,12 +142,14 @@ const game = [
 
         // C7
         {
-            type: "input"
+            type: "input",
+            answer: 3
         },
 
         // C8
         {
-            type: "input"
+            type: "input",
+            answer: 1
         },
 
         // C9
@@ -166,17 +173,20 @@ const game = [
 
         // C3
         {
-            type: "input"
+            type: "input",
+            answer: 9
         },
 
         // C4
         {
-            type: "input"
+            type: "input",
+            answer: 8
         },
 
         // C5
         {
-            type: "input"
+            type: "input",
+            answer: 7
         },
 
         // C6
@@ -187,12 +197,14 @@ const game = [
 
         // C7
         {
-            type: "input"
+            type: "input",
+            answer: 8
         },
 
         // C8
         {
-            type: "input"
+            type: "input",
+            answer: 3
         },
 
         // C9
@@ -211,12 +223,14 @@ const game = [
 
         // C2
         {
-            type: "input"
+            type: "input",
+            answer: 6
         },
 
         // C3
         {
-            type: "input"
+            type: "input",
+            answer: 1
         },
 
         // C4
@@ -227,17 +241,20 @@ const game = [
 
         // C5
         {
-            type: "input"
+            type: "input",
+            answer: 8
         },
 
         // C6
         {
-            type: "input"
+            type: "input",
+            answer: 9
         },
 
         // C7
         {
-            type: "input"
+            type: "input",
+            answer: 7
         },
 
         // C8
@@ -263,17 +280,20 @@ const game = [
 
         // C2
         {
-            type: "input"
+            type: "input",
+            answer: 2
         },
 
         // C3
         {
-            type: "input"
+            type: "input",
+            answer: 3
         },
 
         // C4
         {
-            type: "input"
+            type: "input",
+            answer: 1
         },
 
         // C5
@@ -284,22 +304,26 @@ const game = [
 
         // C6
         {
-            type: "input"
+            type: "input",
+            answer: 3
         },
 
         // C7
         {
-            type: "input"
+            type: "input",
+            answer: 1
         },
 
         // C8
         {
-            type: "input"
+            type: "input",
+            answer: 2
         },
 
         // C9
         {
-            type: "input"
+            type: "input",
+            answer: 5
         }
     ],
 
@@ -313,22 +337,26 @@ const game = [
 
         // C2
         {
-            type: "input"
+            type: "input",
+            answer: 8
         },
 
         // C3
         {
-            type: "input"
+            type: "input",
+            answer: 7
         },
 
         // C4
         {
-            type: "input"
+            type: "input",
+            answer: 9
         },
 
         // C5
         {
-            type: "input"
+            type: "input",
+            answer: 5
         },
 
         // C6
@@ -339,17 +367,20 @@ const game = [
 
         // C7
         {
-            type: "input"
+            type: "input",
+            answer: 9
         },
 
         // C8
         {
-            type: "input"
+            type: "input",
+            answer: 7
         },
 
         // C9
         {
-            type: "input"
+            type: "input",
+            answer: 8
         }
     ],
 
@@ -373,17 +404,20 @@ const game = [
 
         // C4
         {
-            type: "input"
+            type: "input",
+            answer: 4
         },
 
         // C5
         {
-            type: "input"
+            type: "input",
+            answer: 2
         },
 
         // C6
         {
-            type: "input"
+            type: "input",
+            answer: 1
         },
 
         // C7
@@ -394,12 +428,14 @@ const game = [
 
         // C8
         {
-            type: "input"
+            type: "input",
+            answer: 1
         },
 
         // C9
         {
-            type: "input"
+            type: "input",
+            answer: 3
         }
     ],
 
@@ -418,12 +454,14 @@ const game = [
 
         // C3
         {
-            type: "input"
+            type: "input",
+            answer: 9
         },
 
         // C4
         {
-            type: "input"
+            type: "input",
+            answer: 8
         },
 
         // C5
@@ -434,17 +472,20 @@ const game = [
 
         // C6
         {
-            type: "input"
+            type: "input",
+            answer: 2
         },
 
         // C7
         {
-            type: "input"
+            type: "input",
+            answer: 1
         },
 
         // C8
         {
-            type: "input"
+            type: "input",
+            answer: 3
         },
 
         // C9
@@ -468,12 +509,14 @@ const game = [
 
         // C3
         {
-            type: "input"
+            type: "input",
+            answer: 2
         },
 
         // C4
         {
-            type: "input"
+            type: "input",
+            answer: 3
         },
 
         // C5
@@ -484,17 +527,20 @@ const game = [
 
         // C6
         {
-            type: "input"
+            type: "input",
+            answer: 3
         },
 
         // C7
         {
-            type: "input"
+            type: "input",
+            answer: 2
         },
 
         // C8
         {
-            type: "input"
+            type: "input",
+            answer: 4
         },
 
         // C9
