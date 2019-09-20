@@ -495,7 +495,7 @@ const game = [
     ],
 
     [
-        // Row 1
+        // Row 10
         // C1
         {
             type: "blank"

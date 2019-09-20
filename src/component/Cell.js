@@ -1,45 +1,13 @@
 import React from 'react'
 import game from '../kakuro1'
 import SelectNum from './SelectNum'
-import onClickOutside from 'react-onclickoutside'
 
 class Cell extends React.Component {
     constructor() {
         super()
-        this.handleClick = this.handleClick.bind(this)
-        this.state = {
-            showButtons: false,
-            guess: ""
-        }
     }
 
-    handeClickOutside() {
-        
-    }
-    handleClick(e) {
-        let cell = game[this.props.row][this.props.num]
-        if (cell.type ==="input" && this.state.showButtons === false) { 
-            let thisButton = e.target
-            console.log("Click!!")
-            this.setState({
-                showButtons: true
-            })
-            return <SelectNum />
-
-        }
-        console.log(e.target.textContent)
-        if (e.target.textContent.length === 1) {
-            this.setState({
-                guess: e.target.textContent
-            })
-        }
-        
-
-        if (e.target.className !== "select-num" && e.target.className !== "num-btn") {
-            console.log("close")
-        }
-     
-    }
+    
 
    
        
@@ -47,22 +15,50 @@ class Cell extends React.Component {
     
     render() {
         let cell = game[this.props.row][this.props.num]
+        console.log(this.props.row, this.props.num)
         return (
-            <td className={"cell " + cell.type } onClick={this.handleClick}>
+            <td 
+                className={"cell " + cell.type } 
+                onClick={ (e) => {
+                    this.props.handleClick(e, this.props.row, this.props.num)
+                    console.log(this.props.cellValue)
+                }}
+            >
             {cell.type === "rule" ? 
                 <span>
                     <span className="left">{cell.value[0]}</span>
                     <span className="right">{cell.value[1]}</span>
                 </span> 
-            : cell.type === "input" ? this.state.guess : " "}
-            {this.state.showButtons && <SelectNum />}
-                        {/* : cell.type === "input" ? cell.answer  */}
+            : cell.type === "input" ? this.props.cellValue[this.props.row][this.props.num] : " "}
+             
+            {/* {this.props.showButtons[this.props.row][this.props.num] && <SelectNum />} */}
+           
             </td>
         )
     }
+
+    
 }
     
 export default Cell
+
+// render() {
+//     let row = this.props.row
+//     let cellNum = this.props.num
+//     let cell = game[row][cellNum]
+//     return (
+//         <td className={"cell " + cell.type } onClick={ (e) => this.props.handleClick(e, row, cellNum)}>
+//         {cell.type === "rule" ? 
+//             <span>
+//                 <span className="left">{cell.value[0]}</span>
+//                 <span className="right">{cell.value[1]}</span>
+//             </span> 
+//         : cell.type === "input" ? this.props.cellValue[row][cellNum] : " "}
+       
+                    
+//         </td>
+//     )
+// }
 
 
 // TODO

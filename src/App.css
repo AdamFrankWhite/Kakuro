@@ -12,8 +12,12 @@
   border: 1px solid black;
 }
 
+.clicked {
+  border: 2px red solid;
+}
 .game-cont {
   margin: auto;
+  position: relative;
 }
 
 .board {
@@ -70,17 +74,27 @@
 .select-num {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.7);
-  right: 25%;
+  right: 20%;
+  top: 0%;
   z-index: 1000;
-  transition: 0.5s
+  transition: 0.5s;
+  width: 200px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.select-num:hover {
+  cursor: pointer;
 }
 
 .num-btn {
   display: inline-block;
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
   border: black 2px solid;
   border-radius: 5px;
+  font-size: 3em;
 }
 
 .num-btn:hover {
@@ -88,7 +102,6 @@
   background: black;
   color: white;
 }
-
 
 .line {
   height: 50px;
