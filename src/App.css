@@ -12,8 +12,8 @@
   border: 1px solid black;
 }
 
-.clicked {
-  border: 2px red solid;
+.selected {
+  border: 4px green solid;
 }
 .game-cont {
   margin: auto;
@@ -23,6 +23,43 @@
 .board {
   margin: auto;
   border-spacing: 0;
+  position: relative;
+}
+
+.board-win {
+  opacity: 0.25;
+  transition: 0.75s
+}
+
+.win-text {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  opacity: 0;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1em;
+  border: solid 1px black;
+  box-shadow: 2px 2px 2px gray;
+}
+
+.play-again {
+  color: blue;
+}
+
+.play-again:hover {
+  cursor: pointer;
+}
+
+.win-false {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.win-true {
+  visibility: visible;
+  opacity: 1 !important;
+  transition: 0.75s;
 }
 
 .board:hover{

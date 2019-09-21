@@ -1,4 +1,4 @@
-const game = [
+export const game = [
     
     [
         // Row 1
@@ -550,5 +550,19 @@ const game = [
     ]
 
 ]
+
+export function answerSheet(kakuro) {
+    const answerSheet = []
+    for (let i=0; i<kakuro.length; i++) {
+        const row = []
+        for (let j=0; j<kakuro[i].length; j++) {
+            kakuro[i][j].type === "input" ? row.push(kakuro[i][j].answer) : row.push("")
+        }
+        answerSheet.push(row)
+    }
+    return answerSheet
+}
+
+console.log(answerSheet(game))
 
 export default game

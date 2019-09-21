@@ -1,3 +1,10 @@
 When passing down clickhandler, when trying to access child props within clickhandler in parent class, make sure to use anon function in the child component, to return a method with the necessary parameters - only way it works
 
 huge bug getting indivual cells to match with state position array - finally realised error in state array, was wrong dimensions, 9 x 10 - should be 10 x 9
+
+selected feature - first though of looping through all all squares, checking if right one, then realised, simple conditional render in cell component
+
+
+newGame is easy - state makes it so easy, just set won to false
+
+creating function for answerSheet - brilliant - creating a nested array from game module

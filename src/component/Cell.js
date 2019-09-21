@@ -15,13 +15,14 @@ class Cell extends React.Component {
     
     render() {
         let cell = game[this.props.row][this.props.num]
-        console.log(this.props.row, this.props.num)
+        // console.log(this.props.row, this.props.num)
+        let checkSelect = this.props.selectedSquare[0] === this.props.row && this.props.selectedSquare[1] === this.props.num ? " selected" : ""
         return (
             <td 
-                className={"cell " + cell.type } 
+                className={"cell " + cell.type + checkSelect } 
                 onClick={ (e) => {
                     this.props.handleClick(e, this.props.row, this.props.num)
-                    console.log(this.props.cellValue)
+                    // console.log(this.props.cellValue)
                 }}
             >
             {cell.type === "rule" ? 

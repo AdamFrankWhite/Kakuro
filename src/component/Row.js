@@ -15,6 +15,7 @@ function Row(props) {
                     num={i} 
                     showButtons={props.showButtons} 
                     cellValue={props.cellValue}
+                    selectedSquare={props.selectedSquare}
                     handleClick={props.handleClick} />)}    
         </tr>
     )
