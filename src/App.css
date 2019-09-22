@@ -130,7 +130,7 @@
 
 .num-btn {
   display: inline-block;
-  height: 70px;
+  /* height: 70px; */
   width: 70px;
   border: black 2px solid;
   border-radius: 5px;

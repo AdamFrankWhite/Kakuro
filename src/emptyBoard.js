@@ -40,5 +40,5 @@ export const emptyBoard = [
     ],
 ]
 
-export const guesses = JSON.parse(JSON.stringify(emptyBoard))
+export const guessSheet = JSON.parse(JSON.stringify(emptyBoard))
 export default emptyBoard

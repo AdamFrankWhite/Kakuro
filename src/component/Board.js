@@ -4,14 +4,14 @@ import SelectNum from './SelectNum'
 import GameButtons from './GameButtons'
 import WinBox from './WinBox'
 import {answerSheet, games} from '../kakuro1'
-import {emptyBoard, guesses} from '../emptyBoard'
+import {emptyBoard, guessSheet} from '../emptyBoard'
 
 class Board extends React.Component {
     constructor() {
         super()
         this.state = {
             selectedSquare: [],
-            guesses: guesses, 
+            guesses: JSON.parse(JSON.stringify(emptyBoard)), 
             won: false,
             kakuroNum: 0
         }
@@ -108,7 +108,7 @@ class Board extends React.Component {
                         
             return {
                 selectedSquare: [],
-                guesses: emptyBoard,
+                guesses: JSON.parse(JSON.stringify(emptyBoard)),
                 won: false,
                 kakuroNum: kakuroNum
             }
