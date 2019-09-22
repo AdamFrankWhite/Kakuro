@@ -1,4 +1,4 @@
-const emptyBoard = [
+export const emptyBoard = [
     [ 
         "", "", "", "", "", "", "", "", "" 
     ],
@@ -40,5 +40,5 @@ const emptyBoard = [
     ],
 ]
 
-
+export const guesses = JSON.parse(JSON.stringify(emptyBoard))
 export default emptyBoard

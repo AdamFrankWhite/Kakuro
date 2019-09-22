@@ -99,13 +99,16 @@
   border: 4px rgb(4, 0, 238) solid;
 }
 
-.keypad {
-  margin: auto;
-  width: 540px;
+.game-btn {
+  padding: 0.5em;
+  border: 2px black solid;
+  border-radius: 15px;
+  background: white;
 }
 
-.keypad > span {
-  display: inline-block;
+.game-btn:hover {
+  background: gray;
+  cursor: pointer;
 }
 
 .select-num {

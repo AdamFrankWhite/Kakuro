@@ -8,3 +8,20 @@ selected feature - first though of looping through all all squares, checking if 
 newGame is easy - state makes it so easy, just set won to false
 
 creating function for answerSheet - brilliant - creating a nested array from game module
+
+when game win, stop event listener - solved - added ifplaying conditional
+
+bug: indexing error when randomising game - solution: check to see if randnom === games.length
+
+bug: Click solve before selected, crash - solution: move solve setState out of conditional 
+
+bug: old values still being remembered - issue is emptyBoard, but why? Solution: spread operator only creates shallow copy, so when changing state, you were still changing the original array, needed either separate hard copy, or use JSON.parse(JSON.stringify(array))
+
+BUGS TO DO
+
+
+css hover while won=true
+layout - responsive winbox
+
+
+

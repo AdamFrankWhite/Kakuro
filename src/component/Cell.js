@@ -1,5 +1,5 @@
 import React from 'react'
-import game from '../kakuro1'
+import games from '../kakuro1'
 import SelectNum from './SelectNum'
 
 class Cell extends React.Component {
@@ -14,7 +14,7 @@ class Cell extends React.Component {
     
     
     render() {
-        let cell = game[this.props.row][this.props.num]
+        let cell = games[this.props.kakuroNum][this.props.row][this.props.num]
         // console.log(this.props.row, this.props.num)
         let checkSelect = this.props.selectedSquare[0] === this.props.row && this.props.selectedSquare[1] === this.props.num ? " selected" : ""
         return (
@@ -31,8 +31,6 @@ class Cell extends React.Component {
                     <span className="right">{cell.value[1]}</span>
                 </span> 
             : cell.type === "input" ? this.props.cellValue[this.props.row][this.props.num] : " "}
-             
-            {/* {this.props.showButtons[this.props.row][this.props.num] && <SelectNum />} */}
            
             </td>
         )

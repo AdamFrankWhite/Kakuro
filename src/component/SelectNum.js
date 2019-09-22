@@ -13,9 +13,6 @@ function SelectNum(props) {
             <span onClick={(e) => props.handleClick(e)} className="num-btn">8</span>
             <span onClick={(e) => props.handleClick(e)} className="num-btn">9</span>
             <span onClick={(e) => props.handleClick(e)} className="num-btn">C</span>
-            <span onClick={(e) => props.handleClick(e)} className="num-btn">Clear All</span>
-            <span onClick={(e) => props.handleClick(e)} className="num-btn">Hint</span>
-            <span onClick={(e) => props.handleClick(e)} className="num-btn">Solve</span>
         </div>
     )
 }

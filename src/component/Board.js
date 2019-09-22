@@ -1,89 +1,117 @@
 import React from 'react'
 import Row from './Row'
 import SelectNum from './SelectNum'
+import GameButtons from './GameButtons'
 import WinBox from './WinBox'
-import {answerSheet, game} from '../kakuro1'
-import emptyBoard from '../emptyBoard'
+import {answerSheet, games} from '../kakuro1'
+import {emptyBoard, guesses} from '../emptyBoard'
 
 class Board extends React.Component {
     constructor() {
         super()
         this.state = {
-           showButtons: false,
-           selectedSquare: [],
-           guesses: emptyBoard, 
-            won: false
+            selectedSquare: [],
+            guesses: guesses, 
+            won: false,
+            kakuroNum: 0
         }
         this.handleClick = this.handleClick.bind(this)
         this.newGame = this.newGame.bind(this)
     }
 
     handleClick (e, row, num) {
-        console.log(answerSheet(game))
-        this.setState({showButtons: true})
-
-
-
-        let correctAnswers = answerSheet(game)
         
 
-        
-
-        //save reference to square
-        if (e.target.className.includes("input")) {
-            
-            this.setState({selectedSquare: [row, num]})
-
-            // console.log(this.state.selectedSquare)
-        }
-        if (e.target.className == "num-btn") { // can't use strict here, not sure why
-            // console.log(this.state.guesses)
-            let newGuesses = [...this.state.guesses]
-            let sqY = this.state.selectedSquare[0]
-            let sqX = this.state.selectedSquare[1]
-            let numbers = "123456789"
-            newGuesses[sqY][sqX] = numbers.includes(e.target.textContent) ? e.target.textContent : "" // checks number input
-            // console.log(newGuesses, sqX, sqY)
-            console.log(numbers.includes(e.target.textContent))
-            if (e.target.textContent === "Clear All") {
-                this.setState({
-                    guesses: emptyBoard}) 
-                } else if (e.target.textContent === "Hint") {
-                    // this.setState({ })
-                    console.log("hint")
-                } else if (e.target.textContent === "Solve") {
-                    this.setState({ guesses: correctAnswers })
-                } else {
-                    this.setState({guesses: newGuesses})
-                }
-            
-            
-        
-    }
 
 
-
-
-        // add hint button with slider animations for buttons
-        // TODO - create random games with new game objects 
-        
+        let correctAnswers = answerSheet(games[this.state.kakuroNum])
         
     
-        // check win
-        // console.log(JSON.stringify(correctAnswers))
-        if (JSON.stringify(correctAnswers) === JSON.stringify(this.state.guesses)) {
-            this.setState({won: true})
-        }
+        
+        if (!this.state.won) {
+
+            
+                
+            //save reference to square
+            if (e.target.className.includes("input")) {
+                
+                this.setState({selectedSquare: [row, num]})
+        
+            }
+            if (e.target.className == "num-btn" && JSON.stringify(this.state.selectedSquare) !== "[]") { // can't use strict here, not sure why + check if box selected
+                
+                
+                let newGuesses = this.state.guesses
+                let sqY = this.state.selectedSquare[0]
+                let sqX = this.state.selectedSquare[1]
+                let numbers = "123456789"
+                newGuesses[sqY][sqX] = numbers.includes(e.target.textContent) ? e.target.textContent : ""
+                console.log(numbers.includes(e.target.textContent))
+                this.setState({guesses: newGuesses})
+            }  else if (e.target.textContent === "Hint") {
+                // this.setState({ })
+                let newGuesses = [...this.state.guesses]
+                let sqY = this.state.selectedSquare[0]
+                let sqX = this.state.selectedSquare[1]
+                newGuesses[sqY][sqX] = correctAnswers[sqY][sqX]
+                this.setState({guesses: newGuesses})
+                console.log(newGuesses)            
+            } else if (e.target.textContent === "Solve") {
+                this.setState({ guesses: correctAnswers })
+            } else if (e.target.textContent === "Clear All") {
+                console.log("hey")
+                this.setState({
+                    guesses: emptyBoard
+                }) 
+                console.log(emptyBoard)
+            } else if (e.target.textContent === "New Game") {
+                this.newGame()                // this.newGame()
+            }
+                    
+                
+      
+
+
+
+
+            // add hint button with slider animations for buttons
+            // TODO - create random games with new game, finish hint functionality 
+            
+            
+        
+            // check win
+            // console.log(JSON.stringify(correctAnswers))
+            if (JSON.stringify(correctAnswers) === JSON.stringify(this.state.guesses)) {
+                this.setState({won: true})
+            }
+
+        } // end of ifplaying
+        
 
     }
 
 
     newGame() {
-        console.log('new game')
-        this.setState({
-            selectedSquare: [],
-            guesses: emptyBoard,
-            won: false
+        
+        this.setState( prevState => {
+            let kakuroNum = prevState.kakuroNum < games.length - 1 ? prevState.kakuroNum + 1 : 0
+            // let prevGame = prevState.kakuroNum
+            // let randNum = () => {
+            //     let rand = Math.floor(Math.random() * games.length)
+            //     if (rand !== prevGame && rand !== games.length) { // checks for different game and avoid indexing error 
+            //         console.log(rand)
+            //         return rand
+            //     } else {
+            //     randNum()
+            //     }
+            // }
+                        
+            return {
+                selectedSquare: [],
+                guesses: emptyBoard,
+                won: false,
+                kakuroNum: kakuroNum
+            }
         })
     }
 
@@ -100,17 +128,18 @@ class Board extends React.Component {
                             <Row 
                                 num={i}
                                 key={`r-${i}`} 
-                                showButtons={this.state.showButtons} 
                                 handleClick={this.handleClick}
                                 selectedSquare={this.state.selectedSquare}
                                 cellValue={this.state.guesses}
+                                kakuroNum = {this.state.kakuroNum}
                             />)}
                             
                     </tbody>
                     
                 </table>
                 <WinBox won={this.state.won} newGame={this.newGame}/>
-                {this.state.showButtons && <SelectNum handleClick={this.handleClick}/>}
+                <SelectNum handleClick={this.handleClick}/>}
+                <GameButtons handleClick={this.handleClick}/>
                 
             </div> 
             

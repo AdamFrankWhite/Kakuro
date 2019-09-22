@@ -13,10 +13,10 @@ function Row(props) {
                     row={props.num} 
                     key={i} 
                     num={i} 
-                    showButtons={props.showButtons} 
                     cellValue={props.cellValue}
                     selectedSquare={props.selectedSquare}
-                    handleClick={props.handleClick} />)}    
+                    handleClick={props.handleClick}
+                    kakuroNum={props.kakuroNum} />)}    
         </tr>
     )
 }
