@@ -2780,6 +2780,567 @@ export const games = [
             }
         ]
 
+    ],
+
+    // Game 5
+    [
+        
+        [
+            // Row 1
+            // C1
+            {
+                type: "blank"
+            },
+
+            // C2
+            {
+                type: "rule",
+                value: ["16", ""]
+            },
+
+            // C3
+            {
+                type: "rule",
+                value: ["27", ""]
+            },
+
+            // C4
+            {
+                type: "rule",
+                value: ["11", ""]
+            },
+
+            // C5
+            {
+                type: "blank"
+            },
+
+            // C6
+            {
+                type: "blank"
+            },
+
+            // C7
+            {
+                type: "rule",
+                value: ["11", ""]
+            },
+
+            // C8
+            {
+                type: "rule",
+                value: ["27", ""]
+            },
+
+            // C9
+            {
+                type: "blank"
+            }
+        ],
+
+        [
+            // Row 2
+            // C1
+            {
+                type: "rule",
+                value: ["", "6"]
+            },
+
+            // C2
+            {
+                type: "input",
+                answer: 1
+            },
+
+            // C3
+            {
+                type: "input",
+                answer: 3
+            },
+
+            // C4
+            {
+                type: "input",
+                answer: 2
+            },
+
+            // C5
+            {
+                type: "blank"
+            },
+
+            // C6
+            {
+                type: "rule",
+                value: ["10", "11"]
+            },
+
+            // C7
+            {
+                type: "input",
+                answer: 2
+            },
+
+            // C8
+            {
+                type: "input",
+                answer: 9
+            },
+
+            // C9
+            {
+                type: "rule",
+                value: ["9", ""]
+            }
+        ],
+
+        [
+            // Row 3
+            // C1
+            {
+                type: "rule",
+                value: ["", "24"]
+            },
+
+            // C2
+            {
+                type: "input",
+                answer: 8
+            },
+
+            // C3
+            {
+                type: "input",
+                answer: 7
+            },
+
+            // C4
+            {
+                type: "input",
+                answer: 9
+            },
+
+            // C5
+            {
+                type: "rule",
+                value: ["11", "11"]
+            },
+
+            // C6
+            {
+                type: "input",
+                answer: 2
+            },
+
+            // C7
+            {
+                type: "input",
+                answer: 1
+            },
+
+            // C8
+            {
+                type: "input",
+                answer: 3
+            },
+
+            // C9
+            {
+                type: "input",
+                answer: 5
+            }
+        ],
+
+        [
+            // Row 4
+            // C1
+            {
+                type: "rule",
+                value: ["", "16"]
+            },
+
+            // C2
+            {
+                type: "input",
+                answer: 7
+            },
+
+            // C3
+            {
+                type: "input",
+                answer: 9
+            },
+
+            // C4
+            {
+                type: "rule",
+                value: ["16", "24"]
+            },
+
+            // C5
+            {
+                type: "input",
+                answer: 2
+            },
+
+            // C6
+            {
+                type: "input",
+                answer: 8
+            },
+
+            // C7
+            {
+                type: "input",
+                answer: 3
+            },
+
+            // C8
+            {
+                type: "input",
+                answer: 7
+            },
+
+            // C9
+            {
+                type: "input",
+                answer: 4
+            }
+        ],
+
+        [
+            // Row 5
+            // C1
+            {
+                type: "blank"
+            },
+
+            // C2
+            {
+                type: "rule",
+                value: ["", "22"]
+            },
+
+            // C3
+            {
+                type: "input",
+                answer: 8
+            },
+
+            // C4
+            {
+                type: "input",
+                answer: 9
+            },
+
+            // C5
+            {
+                type: "input",
+                answer: 5
+            },
+
+            // C6
+            {
+                type: "rule",
+                value: ["", "13"]
+            },
+
+            // C7
+            {
+                type: "input",
+                answer: 5
+            },
+
+            // C8
+            {
+                type: "input",
+                answer: 8
+            },
+
+            // C9
+            {
+                type: "blank"
+            }
+        ],
+
+        [
+            // Row 6
+            // C1
+            {
+                type: "blank"
+            },
+
+            // C2
+            {
+                type: "rule",
+                value: ["10", ""]
+            },
+
+            // C3
+            {
+                type: "rule",
+                value: ["16", "5"]
+            },
+
+            // C4
+            {
+                type: "input",
+                answer: 2
+            },
+
+            // C5
+            {
+                type: "input",
+                answer: 3
+            },
+
+            // C6
+            {
+                type: "rule",
+                value: ["11", ""]
+            },
+
+            // C7
+            {
+                type: "blank"
+            },
+
+            // C8
+            {
+                type: "rule",
+                value: ["7", ""]
+            },
+
+            // C9
+            {
+                type: "rule",
+                value: ["12", ""]
+            }
+        ],
+
+        [
+            // Row 7
+            // C1
+            {
+                type: "rule",
+                value: ["", "15"]
+            },
+
+            // C2
+            {
+                type: "input",
+                answer: 2
+            },
+
+            // C3
+            {
+                type: "input",
+                answer: 4
+            },
+
+            // C4
+            {
+                type: "input",
+                answer: 5
+            },
+
+            // C5
+            {
+                type: "input",
+                answer: 1
+            },
+
+            // C6
+            {
+                type: "input",
+                answer: 3
+            },
+
+            // C7
+            {
+                type: "rule",
+                value: ["11", "8"]
+            },
+
+            // C8
+            {
+                type: "input",
+                answer: 1
+            },
+
+            // C9
+            {
+                type: "input",
+                answer: 7
+            }
+        ],
+
+        [
+            // Row 8
+            // C1
+            {
+                type: "rule",
+                value: ["", "17"]
+            },
+
+            // C2
+            {
+                type: "input",
+                answer: 8
+            },
+
+            // C3
+            {
+                type: "input",
+                answer: 9
+            },
+
+            // C4
+            {
+                type: "rule",
+                value: ["4", ""]
+            },
+
+            // C5
+            {
+                type: "rule",
+                value: ["", "11"]
+            },
+
+            // C6
+            {
+                type: "input",
+                answer: 1
+            },
+
+            // C7
+            {
+                type: "input", 
+                answer: 3
+            },
+
+            // C8
+            {
+                type: "input",
+                answer: 2
+            },
+
+            // C9
+            {
+                type: "input",
+                answer: 5
+            }
+        ],
+
+        [
+            // Row 9
+            // C1
+            {
+                type: "blank"
+            },
+
+            // C2
+            {
+                type: "rule",
+                value: ["", "4"]
+            },
+
+            // C3
+            {
+                type: "input",
+                answer: 1
+            },
+
+            // C4
+            {
+                type: "input",
+                answer: 3
+            },
+
+            // C5
+            {
+                type: "rule",
+                value: ["", "7"]
+            },
+
+            // C6
+            {
+                type: "input",
+                answer: 2
+            },
+
+            // C7
+            {
+                type: "input",
+                answer: 1
+            },
+
+            // C8
+            {
+                type: "input",
+                answer: 4
+            },
+
+            // C9
+            {
+                type: "blank"
+            }
+        ],
+
+        [
+            // Row 10
+            // C1
+            {
+                type: "blank"
+            },
+
+            // C2
+            {
+                type: "rule",
+                value: ["", "3"]
+            },
+
+            // C3
+            {
+                type: "input",
+                answer: 2
+            },
+
+            // C4
+            {
+                type: "input",
+                answer: 1
+            },
+
+            // C5
+            {
+                type: "rule",
+                value: ["", "12"]
+            },
+
+            // C6
+            {
+                type: "input",
+                answer: 5
+            },
+
+            // C7
+            {
+                type: "input",
+                answer: 7
+            },
+
+            // C8
+            {
+                type: "blank"
+            },
+
+            // C9
+            {
+                type: "blank"
+            }
+        ]
+
     ]
 
     

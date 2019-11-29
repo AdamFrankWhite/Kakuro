@@ -15,7 +15,7 @@ bug: indexing error when randomising game - solution: check to see if randnom ==
 
 bug: Click solve before selected, crash - solution: move solve setState out of conditional 
 
-bug: old values still being remembered - issue is emptyBoard, but why? Solution: spread operator only creates shallow copy, so when changing state, you were still changing the original array, needed either separate hard copy, or use JSON.parse(JSON.stringify(array))
+bug: old values still being remembered - issue is emptyBoard, but why? Solution: spread operator only creates shallow copy, so when changing state, you were still changing the original array, needed either separate hard copy, or use JSON.parse(JSON.stringify(array)), see Board
 
 BUGS TO DO
 

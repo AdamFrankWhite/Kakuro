@@ -29,7 +29,7 @@ class Board extends React.Component {
     
         
         if (!this.state.won) {
-
+            console.log(correctAnswers, this.state.guesses)
             
                 
             //save reference to square
@@ -45,8 +45,8 @@ class Board extends React.Component {
                 let sqY = this.state.selectedSquare[0]
                 let sqX = this.state.selectedSquare[1]
                 let numbers = "123456789"
-                newGuesses[sqY][sqX] = numbers.includes(e.target.textContent) ? e.target.textContent : ""
-                console.log(numbers.includes(e.target.textContent))
+                newGuesses[sqY][sqX] = numbers.includes(e.target.textContent) ? parseInt(e.target.textContent) : ""
+                // console.log(numbers.includes(e.target.textContent))
                 this.setState({guesses: newGuesses})
             }  else if (e.target.textContent === "Hint") {
                 // this.setState({ })
@@ -61,13 +61,16 @@ class Board extends React.Component {
             } else if (e.target.textContent === "Clear All") {
                 console.log("hey")
                 this.setState({
-                    guesses: emptyBoard
+                    guesses: JSON.parse(JSON.stringify(emptyBoard))
                 }) 
                 console.log(emptyBoard)
             } else if (e.target.textContent === "New Game") {
-                this.newGame()                // this.newGame()
+                // this.newGame()        
             }
-                    
+                 
+            if (JSON.stringify(correctAnswers) == JSON.stringify(this.state.guesses)) {
+                this.setState({won: true})
+            }
                 
       
 
@@ -81,9 +84,7 @@ class Board extends React.Component {
         
             // check win
             // console.log(JSON.stringify(correctAnswers))
-            if (JSON.stringify(correctAnswers) === JSON.stringify(this.state.guesses)) {
-                this.setState({won: true})
-            }
+            
 
         } // end of ifplaying
         
@@ -139,7 +140,7 @@ class Board extends React.Component {
                 </table>
                 <WinBox won={this.state.won} newGame={this.newGame}/>
                 <SelectNum handleClick={this.handleClick}/>}
-                <GameButtons handleClick={this.handleClick}/>
+                <GameButtons handleClick={this.handleClick} newGame={this.newGame} />
                 
             </div> 
             
