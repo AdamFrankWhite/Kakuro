@@ -23,7 +23,3 @@ function Row(props) {
     
 export default Row
 
-
-// TODO
-
-// if you click on cell, brings up choice of numbers to click, more satisfying that typing, better UX

@@ -9,6 +9,8 @@
   padding: 0;
 }
 
+/* Element Styles */
+
 h1 {
   font-family: "Luckiest Guy", cursive;
   font-size: 3em;
@@ -22,6 +24,28 @@ h2 {
   margin-bottom: 1.5em;
   
 }
+
+/* Containers */
+
+.game-cont {
+  margin: auto;
+  position: relative;
+}
+
+.board {
+  margin: auto;
+  border-spacing: 0;
+  position: relative;
+  border-radius: 3px;
+  border: 3px solid black;
+}
+
+.board:hover{
+  cursor: pointer;
+}
+
+
+/* Cell Styling */
 
 td {
   background: white;
@@ -37,18 +61,52 @@ td {
 .selected {
   border: 4px green solid;
 }
-.game-cont {
-  margin: auto;
+
+
+.blank {
+  background-color: rgb(11, 11, 11);
+}
+
+.rule {
+  background-image: url("./img/grayBack.png");
   position: relative;
 }
 
-.board {
-  margin: auto;
-  border-spacing: 0;
-  position: relative;
-  border-radius: 3px;
-  border: 3px solid black;
+.rule > span > .left {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  font-size: 1.2em;
 }
+
+.rule > span > .right {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  font-size: 1.2em;
+}
+
+.line {
+  height: 50px;
+  width: 50px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  -moz-transform: skew(-45deg);
+  -webkit-transform: skew(-45deg);
+  transform: skew(-45deg);
+}
+.input {
+  background-color:white;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.input:hover {
+  border: 4px rgb(4, 0, 238) solid;
+}
+
+
+/* Win Box Styles */
 
 .board-win {
   opacity: 0.25;
@@ -86,41 +144,12 @@ td {
   transition: 0.75s;
 }
 
-.board:hover{
-  cursor: pointer;
-}
+/* Game Buttons */
 
-.blank {
-  background-color: rgb(11, 11, 11);
-}
 
-.rule {
-  background-image: url("./img/grayBack.png");
-  position: relative;
-}
-
-.rule > span > .left {
-  position: absolute;
-  left: 5%;
-  bottom: 5%;
-  font-size: 1.2em;
-}
-
-.rule > span > .right {
-  position: absolute;
-  right: 5%;
-  top: 5%;
-  font-size: 1.2em;
-}
-
-.input {
-  background-color:white;
-  font-size: 2em;
-  font-weight: bold;
-}
-
-.input:hover {
-  border: 4px rgb(4, 0, 238) solid;
+.game-buttons {
+  margin: 1.5em;
+  font-family: "Luckiest Guy", cursive;
 }
 
 .game-btn {
@@ -136,6 +165,8 @@ td {
   transition: 0.5s;
 }
 
+/* Keypad numbers */
+
 .select-num {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.7);
@@ -149,11 +180,6 @@ td {
   flex-direction: column;
 }
 
-.game-buttons {
-  margin: 1.5em;
-  font-family: "Luckiest Guy", cursive;
-
-}
 
 .select-num:hover {
   cursor: pointer;
@@ -183,15 +209,6 @@ td {
   border-color: white;
 }
 
-.line {
-  height: 50px;
-  width: 50px;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  -moz-transform: skew(-45deg);
-  -webkit-transform: skew(-45deg);
-  transform: skew(-45deg);
-}
 
 @media (min-width: 820px) {
 
