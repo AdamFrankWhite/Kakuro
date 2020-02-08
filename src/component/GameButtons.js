@@ -2,7 +2,7 @@ import React from 'react'
 
 function GameButtons(props) {
     return (
-        <div>
+        <div className="game-buttons">
             <span onClick={(e) => props.handleClick(e)} className="game-btn">Clear All</span>
             <span onClick={(e) => props.handleClick(e)} className="game-btn">Hint</span>
             <span onClick={(e) => props.handleClick(e)} className="game-btn">Solve</span>

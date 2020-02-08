@@ -136,10 +136,10 @@ class Board extends React.Component {
                             />)}
                             
                     </tbody>
-                    
+                    <SelectNum handleClick={this.handleClick}/>
                 </table>
                 <WinBox won={this.state.won} newGame={this.newGame}/>
-                <SelectNum handleClick={this.handleClick}/>}
+                
                 <GameButtons handleClick={this.handleClick} newGame={this.newGame} />
                 
             </div> 

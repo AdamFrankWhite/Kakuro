@@ -1,13 +1,31 @@
 .App {
   text-align: center;
+  background-color: beige;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 3em;
+  padding: 0.4em 0 0.2em 0;
+  color:lightseagreen;
+  text-shadow: 3px 3px 3px navy;
+}
+
+h2 {
+  font-family: "Pacifico", cursive;
+  margin-bottom: 1.5em;
+  
 }
 
 td {
   background: white;
+  font-family: "Righteous", cursive;
 }
 
 .cell {
@@ -28,6 +46,8 @@ td {
   margin: auto;
   border-spacing: 0;
   position: relative;
+  border-radius: 3px;
+  border: 3px solid black;
 }
 
 .board-win {
@@ -119,14 +139,20 @@ td {
 .select-num {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.7);
-  right: 20%;
-  top: 0%;
+  right: -70px;
+  top: -30px;
   z-index: 1000;
   transition: 0.5s;
-  width: 200px;
+  width: 70px;
   height: 600px;
   display: flex;
   flex-direction: column;
+}
+
+.game-buttons {
+  margin: 1.5em;
+  font-family: "Luckiest Guy", cursive;
+
 }
 
 .select-num:hover {
@@ -135,17 +161,26 @@ td {
 
 .num-btn {
   display: inline-block;
-  /* height: 70px; */
+  height: 70px;
   width: 70px;
   border: black 2px solid;
-  border-radius: 5px;
   font-size: 3em;
+  background-color: rgb(0, 0, 77);
+  color: white;
+}
+
+.num-btn:nth-child(1) {
+  border-radius: 5px 5px 0 0;
+}
+
+.num-btn:nth-child(10) {
+  border-radius: 0 0 5px 5px;
 }
 
 .num-btn:hover {
   transition: 0.5s;
-  background: black;
-  color: white;
+  background-color: rgb(48, 48, 211);
+  border-color: white;
 }
 
 .line {
@@ -159,6 +194,13 @@ td {
 }
 
 @media (min-width: 820px) {
+
+  .App {
+    width: 70%; 
+    margin: 0.5em auto;
+    border: 5px black solid;
+    border-radius: 5px;
+  }
   .cell {
     width: 60px;
     height: 60px;
