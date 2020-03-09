@@ -1,13 +1,13 @@
-## BeerMe
+## Kakuro App
 
 Logic Puzzle app, using React
 
 ### `Features`
 
-*Randomized games
-*Hint and solve button
-\*User-friendly design
-<br />
+- Randomized games
+- Hint and solve button
+- User-friendly design
+  <br />
 
 ### `Development`
 
